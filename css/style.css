@@ -41,3 +41,11 @@ header button {
     bottom: 5%;
     list-style: none;
 }
+#more-news li {
+    display: flex;
+    height: fit-content;
+    margin-bottom: 1vh;
+}
+#more-news img {
+    width: 20%;
+}
