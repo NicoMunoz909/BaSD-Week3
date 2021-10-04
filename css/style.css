@@ -46,6 +46,7 @@ header button {
     border: none;
 }
 footer {
+    padding-top: 1vh;
     background: #888888;
     text-align: center;
 }
