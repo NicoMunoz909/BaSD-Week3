@@ -89,3 +89,23 @@ header button {
 #more-news div {
     margin-left: 2vw;
 }
+#most-read li {
+    position: relative;
+    counter-increment: li;
+    width: 90%;
+    margin-bottom: 3vh;
+}
+#most-read li > div {
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+}
+#most-read li::marker {
+    content:counter(li) " ";
+    font-weight: bolder;
+    font-size: 2em;
+}
+#most-read li img {
+    width: 20%;
+}
