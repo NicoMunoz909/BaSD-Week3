@@ -110,6 +110,7 @@ footer {
 .new2 > div {
     display: flex;
     justify-content: space-between;
+    height: fit-content;
 }
 .new2 > div > div {
     padding: 2vh 0 2vh 0;
@@ -117,11 +118,17 @@ footer {
 .new2 img {
     width: 50%;
 }
+.banner {
+    width: 100%;
+}
 #more-news li {
     display: flex;
     height: fit-content;
     margin: auto;
     margin-bottom: 1vh;
+}
+#more-news ul {
+    width: 90%;
 }
 #more-news img {
     width: 20%;
@@ -171,5 +178,13 @@ footer ul {
     }
     #more-news, #most-read {
         width: 50%;
+    }
+}
+@media (min-width: 1024px) {
+    nav {
+        display: block;
+    }
+    #menu {
+        display: none;
     }
 }
