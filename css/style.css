@@ -5,6 +5,7 @@ body {
     width: 100%;
     margin: 0;
     font-size: smaller;
+    font-family: 'Roboto', sans-serif;
 }
 header {
     display: flex;
@@ -21,6 +22,9 @@ ul {
 }
 h3, p {
     margin: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bebas Neue', cursive;
 }
 header img {
     width: 15%;
@@ -47,9 +51,9 @@ header button {
     border-top: 1px solid gray;
     border-bottom: 1px solid gray;
 }
-.new2 div {
+.new2 > div {
     display: flex;
-    font-size: 2em;
+    justify-content: space-between;
 }
 .new2 img {
     width: 50%;
