@@ -30,6 +30,11 @@ h3, p {
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Bebas Neue', cursive;
 }
+h2 {
+    font-size: 2em;
+    width: 90%;
+    border-bottom: 1px solid grey;
+}
 header img {
     width: 15%;
     height: auto;
@@ -49,13 +54,15 @@ header button {
     bottom: 5%;
     list-style: none;
 }
+.tag {
+    font-size: 0.8em;
+}
 .new1 .tag {
     padding: 0.3em;
     border-radius: 10px;
     background-color: #f38b14;
 }
 .new2 {
-    padding: 2vh 0 2vh 0;
     margin: 2vh 0 2vh 0;
     border-top: 1px solid gray;
     border-bottom: 1px solid gray;
@@ -64,14 +71,21 @@ header button {
     display: flex;
     justify-content: space-between;
 }
+.new2 > div > div {
+    padding: 2vh 0 2vh 0;
+}
 .new2 img {
     width: 50%;
 }
 #more-news li {
     display: flex;
     height: fit-content;
+    margin: auto;
     margin-bottom: 1vh;
 }
 #more-news img {
     width: 20%;
+}
+#more-news div {
+    margin-left: 2vw;
 }
