@@ -36,11 +36,11 @@ header button {
     padding: 0 1rem 0 1rem;
     border: none;
 }
-#main-new {
+.new1 {
     position: relative;
     margin-top: 4vh;
 }
-#main-new div{
+.new1 div{
     position: absolute;
     bottom: 5%;
     list-style: none;
