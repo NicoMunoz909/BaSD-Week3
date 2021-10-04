@@ -136,8 +136,6 @@ footer {
     margin-bottom: 3vh;
 }
 #most-read li > div {
-    position: absolute;
-    top: 0;
     display: flex;
     justify-content: space-between;
 }
@@ -145,9 +143,6 @@ footer {
     content:counter(li) " ";
     font-weight: bolder;
     font-size: 2em;
-}
-#most-read li img {
-    width: 20%;
 }
 footer ul {
     width: fit-content;
