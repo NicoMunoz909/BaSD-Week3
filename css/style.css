@@ -45,6 +45,10 @@ header button {
     padding: 0 1rem 0 1rem;
     border: none;
 }
+footer {
+    background: #888888;
+    text-align: center;
+}
 .new1 {
     position: relative;
     margin-top: 4vh;
@@ -108,4 +112,8 @@ header button {
 }
 #most-read li img {
     width: 20%;
+}
+footer ul {
+    width: fit-content;
+    margin: auto;
 }
