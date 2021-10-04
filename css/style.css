@@ -68,10 +68,6 @@ h2 {
     width: 90%;
     border-bottom: 1px solid grey;
 }
-header img {
-    width: 15%;
-    height: auto;
-}
 header button {
     background-color: transparent;
     height: 100%;
@@ -85,15 +81,17 @@ footer {
 }
 .container {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-between;
 }
-.new1 {
+.new1{
     position: relative;
+    height: fit-content;
     margin-top: 4vh;
 }
 .new1 div{
     position: absolute;
     bottom: 5%;
+    padding-left: 2vw;
     list-style: none;
 }
 .tag {
@@ -154,4 +152,21 @@ footer {
 footer ul {
     width: fit-content;
     margin: auto;
+}
+@media (min-width: 768px) {
+    .news1-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .news3-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 40%;
+        margin: 1vh 0 0 1vw;
+        padding-left: 1vw;
+        border-left: 1px solid gray;
+        font-size: 80%;
+    }
 }
