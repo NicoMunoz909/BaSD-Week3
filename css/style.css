@@ -45,6 +45,11 @@ header button {
     bottom: 5%;
     list-style: none;
 }
+.new1 .tag {
+    padding: 0.3em;
+    border-radius: 10px;
+    background-color: #f38b14;
+}
 .new2 {
     padding: 2vh 0 2vh 0;
     margin: 2vh 0 2vh 0;
