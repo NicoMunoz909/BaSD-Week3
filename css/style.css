@@ -41,6 +41,19 @@ header button {
     bottom: 5%;
     list-style: none;
 }
+.new2 {
+    padding: 2vh 0 2vh 0;
+    margin: 2vh 0 2vh 0;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+.new2 div {
+    display: flex;
+    font-size: 2em;
+}
+.new2 img {
+    width: 50%;
+}
 #more-news li {
     display: flex;
     height: fit-content;
