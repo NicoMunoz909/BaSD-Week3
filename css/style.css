@@ -6,13 +6,31 @@ body {
     margin: 0;
     font-size: smaller;
     font-family: 'Roboto', sans-serif;
+    overflow-y: scroll;
 }
-header {
+header div{
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 5vh;
     border-bottom: 1px solid black;
+}
+nav {
+    margin: auto;
+    border-bottom: 1px solid black;
+    text-align: center;
+    display: none;
+}
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+}
+nav li {
+    padding: 1vh;
+}
+nav li:hover {
+    background: chartreuse;
 }
 a {
     text-decoration: none;
@@ -22,6 +40,7 @@ img {
     max-width: 100%;
 }
 ul {
+    list-style: none;
     padding: 0%;
 }
 h3, p {
@@ -29,6 +48,20 @@ h3, p {
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Bebas Neue', cursive;
+    color: white;
+    text-shadow: 1px 0px 0px black,
+                 0px 1px 0px black,
+                 -1px 0px 0px black,
+                 0px -1px 0px black;
+    font-style: italic;
+}
+h1 {
+    color: white;
+    text-shadow: 1px 0px 0px black,
+                 0px 1px 0px black,
+                 -1px 0px 0px black,
+                 0px -1px 0px black;
+    font-style: italic;
 }
 h2 {
     font-size: 2em;
@@ -49,6 +82,10 @@ footer {
     padding-top: 1vh;
     background: #888888;
     text-align: center;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
 }
 .new1 {
     position: relative;
