@@ -30,7 +30,7 @@ nav li {
     padding: 1vh;
 }
 nav li:hover {
-    background: chartreuse;
+    background: #f38b14;
 }
 a {
     text-decoration: none;
@@ -53,11 +53,15 @@ h1,h2,h3 {
                  -1px 0px 0px black,
                  0px -1px 0px black;
     font-style: italic;
+    font-family: 'Bebas Neue', cursive;
 }
 h3 {
     font-size: 2em;
     width: 90%;
     border-bottom: 1px solid grey;
+}
+h4 {
+    margin: 0;
 }
 header button {
     background-color: transparent;
@@ -67,8 +71,11 @@ header button {
 }
 footer {
     padding-top: 1vh;
-    background: #888888;
+    border-top: 1px solid gray;
     text-align: center;
+}
+footer a:hover {
+    text-decoration: underline;
 }
 .container {
     display: flex;
@@ -106,6 +113,9 @@ footer {
     border-bottom: 1px solid gray;
     font-size: smaller;
 }
+.new2 h2{
+    margin: 0;
+}
 .new2 > div {
     width: 50%;
     height: fit-content;
@@ -132,6 +142,9 @@ footer {
 }
 #more-news div {
     margin-left: 2vw;
+}
+#most-read h2 {
+    margin: 0;
 }
 #most-read li {
     position: relative;
