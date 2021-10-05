@@ -87,12 +87,17 @@ footer {
     position: relative;
     height: fit-content;
     margin-top: 4vh;
+    color: white;
 }
 .new1 div{
     position: absolute;
     bottom: 5%;
     padding-left: 2vw;
+    padding-right: 2vw;
     list-style: none;
+}
+.new1 img {
+    width: 100%;
 }
 .tag {
     font-size: 0.8em;
@@ -103,20 +108,21 @@ footer {
     background-color: #f38b14;
 }
 .new2 {
+    display: flex;
+    height: 20vh;
     margin: 2vh 0 2vh 0;
     border-top: 1px solid gray;
     border-bottom: 1px solid gray;
+    font-size: smaller;
 }
 .new2 > div {
-    display: flex;
-    justify-content: space-between;
+    width: 50%;
     height: fit-content;
-}
-.new2 > div > div {
-    padding: 2vh 0 2vh 0;
+    padding-left: 1vw;
 }
 .new2 img {
     width: 50%;
+    overflow: hidden;
 }
 .banner {
     width: 100%;
@@ -152,7 +158,7 @@ footer {
     font-size: 2em;
 }
 footer ul {
-    width: fit-content;
+    width: 100%;
     margin: auto;
 }
 @media (min-width: 768px) {
@@ -168,10 +174,13 @@ footer ul {
         margin: 4vh 0 0 1vw;
         padding-left: 1vw;
         border-left: 1px solid gray;
-        font-size: 80%;
+        font-size: 0.8vw;
     }
     .new3 {
         margin: 0;
+    }
+    .new2 {
+        width: 33.3%;
     }
     .news2-container, .other-news-container {
         display: flex;
