@@ -1,0 +1,18 @@
+#most-read h2 {
+    margin: 0;
+}
+#most-read li {
+    position: relative;
+    counter-increment: li;
+    width: 90%;
+    margin-bottom: 3vh;
+}
+#most-read li > div {
+    display: flex;
+    justify-content: space-between;
+}
+#most-read li::marker {
+    content:counter(li) " ";
+    font-weight: bolder;
+    font-size: 2em;
+}

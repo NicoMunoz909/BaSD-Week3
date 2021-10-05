@@ -1,0 +1,22 @@
+.new1{
+    position: relative;
+    height: fit-content;
+    margin-top: 4vh;
+    color: white;
+}
+.new1 div{
+    position: absolute;
+    bottom: 5%;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    list-style: none;
+}
+.new1 img {
+    width: 100%;
+}
+
+.new1 .tag {
+    padding: 0.3em;
+    border-radius: 10px;
+    background-color: #f38b14;
+}

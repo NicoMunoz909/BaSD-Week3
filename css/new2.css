@@ -1,0 +1,20 @@
+.new2 {
+    display: flex;
+    height: 20vh;
+    margin: 2vh 0 2vh 0;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    font-size: smaller;
+}
+.new2 h2{
+    margin: 0;
+}
+.new2 > div {
+    width: 50%;
+    height: fit-content;
+    padding-left: 1vw;
+}
+.new2 img {
+    width: 50%;
+    overflow: hidden;
+}

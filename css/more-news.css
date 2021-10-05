@@ -1,0 +1,15 @@
+#more-news li {
+    display: flex;
+    height: fit-content;
+    margin: auto;
+    margin-bottom: 1vh;
+}
+#more-news ul {
+    width: 90%;
+}
+#more-news img {
+    width: 20%;
+}
+#more-news div {
+    margin-left: 2vw;
+}
