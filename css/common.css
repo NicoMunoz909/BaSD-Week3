@@ -97,3 +97,6 @@ footer .no-border {
 .banner {
     width: 100%;
 }
+.uppercase {
+    text-transform: uppercase;
+}
