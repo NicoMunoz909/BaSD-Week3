@@ -4,6 +4,7 @@
 body {
     width: 100%;
     margin: 0;
+    padding: 1vw;
     font-size: smaller;
     font-family: 'Roboto', sans-serif;
     overflow-y: scroll;
