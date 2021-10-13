@@ -71,9 +71,22 @@ header button {
     border: none;
 }
 form {
+    padding: 10vh 0 10vh 0;
+}
+form > label {
+    margin: auto;
+}
+form .inputs-container{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+}
+form  .form-column {
+    padding: 0 5vw 0 5vw;
+}
+form .input-validation {
+    display: block;
+    height: 30px;
 }
 label {
     display: flex;
