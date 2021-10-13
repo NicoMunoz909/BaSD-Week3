@@ -70,6 +70,11 @@ header button {
     padding: 0 1rem 0 1rem;
     border: none;
 }
+form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 label {
     display: flex;
     flex-direction: column;
