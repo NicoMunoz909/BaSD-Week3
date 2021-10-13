@@ -72,6 +72,9 @@ header button {
 }
 form {
     padding: 10vh 0 10vh 0;
+    margin-bottom: 5vh;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
 }
 form > label {
     margin: auto;
@@ -98,7 +101,7 @@ form .input-validation {
 label {
     display: flex;
     flex-direction: column;
-    width: 400px;
+    width: 300px;
     color: white;
     text-shadow: 1px 0px 0px black,
                  0px 1px 0px black,
