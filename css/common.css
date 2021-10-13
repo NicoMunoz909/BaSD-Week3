@@ -88,6 +88,13 @@ form .input-validation {
     display: block;
     height: 30px;
 }
+#form-title {
+    font-size: 2.5rem;
+    border-bottom: 1px solid gray;
+}
+#form-title, #form-greetings {
+    text-align: center;
+}
 label {
     display: flex;
     flex-direction: column;
