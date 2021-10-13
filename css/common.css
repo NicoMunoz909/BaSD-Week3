@@ -111,6 +111,15 @@ label {
     font-family: 'Bebas Neue', cursive;
     text-transform: uppercase;
 }
+#send-btn {
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: transparent;
+}
+#send-btn:hover {
+    background-color: #f38b14;
+    cursor: pointer;
+}
 footer {
     padding-top: 1vh;
     border-top: 1px solid gray;
