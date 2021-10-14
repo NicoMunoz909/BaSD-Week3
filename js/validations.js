@@ -59,6 +59,16 @@ function validatePhoneNumber() {
     }
 }
 
+function validateAddress() {
+    var validation = document.getElementById('address-validation');
+    var inputValue = document.getElementById('address-input').value;
+    if (inputValue.length > 5 && inputValue.indexOf(' ') > 1 && inputValue.search(/[a-z]/) >= 0 && inputValue.search(/[0-9]/) >= 0) {
+        return true
+    } else {
+        validation.innerHTML = '*Must be at least 5 characters long, contain a whitespace, leters and numbers';
+    }
+}
+
 var nameInput = document.getElementById('name-input');
 nameInput.addEventListener('blur', validateName);
 nameInput.addEventListener('focus', function(){
@@ -93,5 +103,11 @@ var phoneInput = document.getElementById('phone-input');
 phoneInput.addEventListener('blur', validatePhoneNumber);
 phoneInput.addEventListener('focus', function(){
     var validation = document.getElementById('phone-validation');
+    validation.innerHTML = '';
+});
+var addressInput = document.getElementById('address-input');
+addressInput.addEventListener('blur', validateAddress);
+addressInput.addEventListener('focus', function(){
+    var validation = document.getElementById('address-validation');
     validation.innerHTML = '';
 });
