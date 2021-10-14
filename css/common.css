@@ -89,7 +89,9 @@ form  .form-column {
 }
 form .input-validation {
     display: block;
-    height: 30px;
+    height: 50px;
+    max-width: 300px;
+    color: red;
 }
 #form-title {
     font-size: 2.5rem;
