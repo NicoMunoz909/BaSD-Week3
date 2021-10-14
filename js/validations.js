@@ -41,7 +41,6 @@ function validatePasswordConfirmation() {
 function validateAge() {
     var validation = document.getElementById('age-validation');
     var inputValue = parseFloat(document.getElementById('age-input').value);
-    console.log(inputValue);
     if (Number.isInteger(inputValue) && inputValue >= 18) {
         return true
     } else {
@@ -66,6 +65,26 @@ function validateAddress() {
         return true
     } else {
         validation.innerHTML = '*Must be at least 5 characters long, contain a whitespace, leters and numbers';
+    }
+}
+
+function validateCity() {
+    var validation = document.getElementById('city-validation');
+    var inputValue = document.getElementById('city-input').value;
+    if (inputValue.length >= 3) {
+        return true
+    } else {
+        validation.innerHTML = '*Must be at least 3 characters long.';
+    }
+}
+
+function validatePostalCode() {
+    var validation = document.getElementById('postal-validation');
+    var inputValue = document.getElementById('postal-input').value;
+    if (inputValue.length >= 3) {
+        return true
+    } else {
+        validation.innerHTML = '*Must be at least 3 characters long.';
     }
 }
 
@@ -109,5 +128,17 @@ var addressInput = document.getElementById('address-input');
 addressInput.addEventListener('blur', validateAddress);
 addressInput.addEventListener('focus', function(){
     var validation = document.getElementById('address-validation');
+    validation.innerHTML = '';
+});
+var cityInput = document.getElementById('city-input');
+cityInput.addEventListener('blur', validateCity);
+cityInput.addEventListener('focus', function(){
+    var validation = document.getElementById('city-validation');
+    validation.innerHTML = '';
+});
+var postalInput = document.getElementById('postal-input');
+postalInput.addEventListener('blur', validatePostalCode);
+postalInput.addEventListener('focus', function(){
+    var validation = document.getElementById('postal-validation');
     validation.innerHTML = '';
 });
