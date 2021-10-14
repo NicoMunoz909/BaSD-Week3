@@ -88,6 +88,16 @@ function validatePostalCode() {
     }
 }
 
+function validateIDNumber() {
+    var validation = document.getElementById('id-validation');
+    var inputValue = document.getElementById('id-input').value;
+    if (inputValue.length >= 7 && inputValue.length <= 8 && !inputValue.includes('.')) {
+        return true
+    } else {
+        validation.innerHTML = '*Must be a number with 7 or 8 digits.';
+    }
+}
+
 var nameInput = document.getElementById('name-input');
 nameInput.addEventListener('blur', validateName);
 nameInput.addEventListener('focus', function(){
@@ -140,5 +150,11 @@ var postalInput = document.getElementById('postal-input');
 postalInput.addEventListener('blur', validatePostalCode);
 postalInput.addEventListener('focus', function(){
     var validation = document.getElementById('postal-validation');
+    validation.innerHTML = '';
+});
+var IDInput = document.getElementById('id-input');
+IDInput.addEventListener('blur', validateIDNumber);
+IDInput.addEventListener('focus', function(){
+    var validation = document.getElementById('id-validation');
     validation.innerHTML = '';
 });
