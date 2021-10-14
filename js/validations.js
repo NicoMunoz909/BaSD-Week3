@@ -41,10 +41,21 @@ function validatePasswordConfirmation() {
 function validateAge() {
     var validation = document.getElementById('age-validation');
     var inputValue = parseFloat(document.getElementById('age-input').value);
+    console.log(inputValue);
     if (Number.isInteger(inputValue) && inputValue >= 18) {
         return true
     } else {
         validation.innerHTML = '*Age must an integer over 18';
+    }
+}
+
+function validatePhoneNumber() {
+    var validation = document.getElementById('phone-validation');
+    var inputValue = document.getElementById('phone-input').value;
+    if (inputValue.length >= 7 && !inputValue.includes('-')) {
+        return true
+    } else {
+        validation.innerHTML = '*Must be at least 7 digits long. Can\'t contain whitespace, hyphen or parenthesis';
     }
 }
 
@@ -76,5 +87,11 @@ var AgeInput = document.getElementById('age-input');
 AgeInput.addEventListener('blur', validateAge);
 AgeInput.addEventListener('focus', function(){
     var validation = document.getElementById('age-validation');
+    validation.innerHTML = '';
+});
+var phoneInput = document.getElementById('phone-input');
+phoneInput.addEventListener('blur', validatePhoneNumber);
+phoneInput.addEventListener('focus', function(){
+    var validation = document.getElementById('phone-validation');
     validation.innerHTML = '';
 });
