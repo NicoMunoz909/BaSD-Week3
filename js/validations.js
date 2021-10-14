@@ -11,10 +11,30 @@ function validateName() {
 function validateEmail() {
     var validation = document.getElementById('email-validation');
     var inputValue = document.getElementById('email-input').value;
-    if (inputValue.indexOf('@') > 2 && inputValue.indexOf('.') > 4 ) {
+    if (inputValue.indexOf('@') > 2 && inputValue.indexOf('.') > inputValue.indexOf('@')+2 ) {
         return true
     } else {
-        validation.innerHTML = '*Must be a valid email format. (contain "@" and ".")';
+        validation.innerHTML = '*Must be a valid email format.';
+    }
+}
+
+function validatePassword() {
+    var validation = document.getElementById('password-validation');
+    var inputValue = document.getElementById('password-input').value;
+    if (inputValue.length >= 8 && inputValue.search(/[a-z]/) >= 0 && inputValue.search(/[0-9]/) >= 0) {
+        return true
+    } else {
+        validation.innerHTML = '*Must be at least 8 characters long and contain numbers and letters';
+    }
+}
+
+function validatePasswordConfirmation() {
+    var validation = document.getElementById('confirm-password-validation');
+    var inputValue = document.getElementById('confirm-password-input').value;
+    if (inputValue === document.getElementById('password-input').value) {
+        return true
+    } else {
+        validation.innerHTML = '*Passwords don\'t match';
     }
 }
 
@@ -28,5 +48,17 @@ var emailInput = document.getElementById('email-input');
 emailInput.addEventListener('blur', validateEmail);
 emailInput.addEventListener('focus', function(){
     var validation = document.getElementById('email-validation');
+    validation.innerHTML = '';
+});
+var passwordInput = document.getElementById('password-input');
+passwordInput.addEventListener('blur', validatePassword);
+passwordInput.addEventListener('focus', function(){
+    var validation = document.getElementById('password-validation');
+    validation.innerHTML = '';
+});
+var passwordConfirmationInput = document.getElementById('confirm-password-input');
+passwordConfirmationInput.addEventListener('blur', validatePasswordConfirmation);
+passwordConfirmationInput.addEventListener('focus', function(){
+    var validation = document.getElementById('confirm-password-validation');
     validation.innerHTML = '';
 });
