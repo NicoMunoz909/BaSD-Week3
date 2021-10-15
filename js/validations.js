@@ -111,6 +111,7 @@ function validateIDNumber() {
 function validateForm() {
     var isValid = true;
     var errorsArray = [];
+    var inputsArray = [];
     var fields = document.getElementsByClassName('getter');
     for (var i=0; i < fields.length; i++ ) {
         console.log(i)
@@ -167,7 +168,10 @@ function validateForm() {
         }
     }
     if (isValid) {
-        alert('everything ok');
+        for (var i=0; i < fields.length; i++ ) {
+            inputsArray.push(fields[i].value);
+        }
+        alert(inputsArray.join('\n'));
         return true;
     } else {
         alert(errorsArray.join('\n'));
