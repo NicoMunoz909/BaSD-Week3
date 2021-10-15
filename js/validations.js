@@ -4,7 +4,8 @@ function validateName() {
     if (inputValue.length > 6 && inputValue.indexOf(' ') > 2) {
         return true
     } else {
-        validation.innerHTML = '*Full name must be at least 6 characters long and contain a whitespace'
+        validation.innerHTML = '*Full name must be at least 6 characters long and contain a whitespace';
+        return false
     }
 }
 
@@ -15,6 +16,7 @@ function validateEmail() {
         return true
     } else {
         validation.innerHTML = '*Must be a valid email format.';
+        return false
     }
 }
 
@@ -25,6 +27,7 @@ function validatePassword() {
         return true
     } else {
         validation.innerHTML = '*Must be at least 8 characters long and contain numbers and letters';
+        return false
     }
 }
 
@@ -35,6 +38,7 @@ function validatePasswordConfirmation() {
         return true
     } else {
         validation.innerHTML = '*Passwords don\'t match';
+        return false
     }
 }
 
@@ -45,6 +49,7 @@ function validateAge() {
         return true
     } else {
         validation.innerHTML = '*Age must an integer over 18';
+        return false
     }
 }
 
@@ -55,6 +60,7 @@ function validatePhoneNumber() {
         return true
     } else {
         validation.innerHTML = '*Must be at least 7 digits long. Can\'t contain whitespace, hyphen or parenthesis';
+        return false
     }
 }
 
@@ -65,6 +71,7 @@ function validateAddress() {
         return true
     } else {
         validation.innerHTML = '*Must be at least 5 characters long, contain a whitespace, leters and numbers';
+        return false
     }
 }
 
@@ -75,6 +82,7 @@ function validateCity() {
         return true
     } else {
         validation.innerHTML = '*Must be at least 3 characters long.';
+        return false
     }
 }
 
@@ -85,6 +93,7 @@ function validatePostalCode() {
         return true
     } else {
         validation.innerHTML = '*Must be at least 3 characters long.';
+        return false
     }
 }
 
@@ -95,7 +104,12 @@ function validateIDNumber() {
         return true
     } else {
         validation.innerHTML = '*Must be a number with 7 or 8 digits.';
+        return false
     }
+}
+
+function validateForm() {
+    
 }
 
 var nameInput = document.getElementById('name-input');
@@ -158,3 +172,5 @@ IDInput.addEventListener('focus', function(){
     var validation = document.getElementById('id-validation');
     validation.innerHTML = '';
 });
+var sendButton = document.getElementById('send-btn');
+sendButton.addEventListener('click', validateForm)
