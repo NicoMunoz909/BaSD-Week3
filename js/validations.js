@@ -116,7 +116,7 @@ function validateForm() {
         console.log(i)
         if (fields[i].id == 'name-input') {
             if (!validateName()) {
-                errorsArray.push('Full name must be at least 6 characters long and contain a whitespace');
+                errorsArray.push('Full name must be at least 6 characters long and contain a whitespace.');
                 isValid = false;
             }
         } else if (fields[i].id == 'email-input') {
@@ -126,27 +126,27 @@ function validateForm() {
             }
         } else if (fields[i].id == 'password-input') {
             if (!validatePassword()) {
-                errorsArray.push('Password must be at least 8 characters long and contain numbers and letters');
+                errorsArray.push('Password must be at least 8 characters long and contain numbers and letters.');
                 isValid = false;
             }
         } else if (fields[i].id == 'confirm-password-input') {
             if (!validatePasswordConfirmation()) {
-                errorsArray.push('Passwords don\'t match');
+                errorsArray.push('Passwords don\'t match.');
                 isValid = false;
             }
         } else if (fields[i].id == 'age-input') {
             if (!validateAge()) {
-                errorsArray.push('Age must an integer equal or higher than 18');
+                errorsArray.push('Age must an integer equal or higher than 18.');
                 isValid = false;
             }
         } else if (fields[i].id == 'phone-input') {
             if (!validatePhoneNumber()) {
-                errorsArray.push('Phone must be at least 7 digits long. Can\'t contain whitespace, hyphen or parenthesis');
+                errorsArray.push('Phone must be at least 7 digits long. Can\'t contain whitespace, hyphen or parenthesis.');
                 isValid = false;
             }
         } else if (fields[i].id == 'address-input') {
             if (!validateAddress()) {
-                errorsArray.push('Address must be at least 5 characters long, contain a whitespace, leters and numbers');
+                errorsArray.push('Address must be at least 5 characters long, contain a whitespace, leters and numbers.');
                 isValid = false;
             }
         } else if (fields[i].id == 'city-input') {
@@ -170,7 +170,7 @@ function validateForm() {
         alert('everything ok');
         return true;
     } else {
-        alert(errorsArray);
+        alert(errorsArray.join('\n'));
         return false;
     }
 }
