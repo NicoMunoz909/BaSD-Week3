@@ -97,7 +97,7 @@ form .input-validation {
     font-size: 2.5rem;
     border-bottom: 1px solid gray;
 }
-#form-title, #form-greetings {
+#form-title, #form-greeting {
     text-align: center;
 }
 label {

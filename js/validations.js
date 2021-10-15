@@ -178,12 +178,22 @@ function validateForm() {
     }
 }
 
+function updateGreeting() {
+    var greeting = document.getElementById('form-greeting');
+    var nameInput = document.getElementById('name-input').value;
+    greeting.innerHTML = `Hello ${nameInput}`;
+}
+
 var nameInput = document.getElementById('name-input');
 nameInput.addEventListener('blur', validateName);
 nameInput.addEventListener('focus', function(){
     var validation = document.getElementById('name-validation');
     validation.innerHTML = '';
 });
+nameInput.addEventListener('focus', updateGreeting);
+nameInput.addEventListener('blur', updateGreeting);
+nameInput.addEventListener('keydown', updateGreeting);
+
 var emailInput = document.getElementById('email-input');
 emailInput.addEventListener('blur', validateEmail);
 emailInput.addEventListener('focus', function(){
@@ -239,4 +249,4 @@ IDInput.addEventListener('focus', function(){
     validation.innerHTML = '';
 });
 var sendButton = document.getElementById('send-btn');
-sendButton.addEventListener('click', validateForm)
+sendButton.addEventListener('click', validateForm);
