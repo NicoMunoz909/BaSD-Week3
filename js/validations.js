@@ -114,7 +114,6 @@ function validateForm() {
     var inputsArray = [];
     var fields = document.getElementsByClassName('getter');
     for (var i=0; i < fields.length; i++ ) {
-        console.log(i)
         if (fields[i].id == 'name-input') {
             if (!validateName()) {
                 errorsArray.push('Full name must be at least 6 characters long and contain a whitespace.');
