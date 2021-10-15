@@ -112,7 +112,10 @@ function validateForm() {
     var isValid = true;
     var errorsArray = [];
     var inputsArray = [];
-    var fields = document.getElementsByClassName('getter');
+    var fields = document.getElementsByClassName('getter'); //Get all the input fields on the form
+    /*Iterate trough all the input fields and call the apropiate validate function by matching the id's
+    If the validate function returns false, push the error message to the errors array 
+    and set isValid flag to false*/
     for (var i=0; i < fields.length; i++ ) {
         if (fields[i].id == 'name-input') {
             if (!validateName()) {
@@ -166,6 +169,9 @@ function validateForm() {
             }
         }
     }
+    /*If the isValid flag is true that means there are no errors on the form so it
+    gathers all the inputs values by iterating trough the fields then show them on an alert,
+    finally reset the form and the greeting*/
     if (isValid) {
         for (var i=0; i < fields.length; i++ ) {
             inputsArray.push(fields[i].value);
@@ -174,6 +180,7 @@ function validateForm() {
         document.getElementById('form-greeting').innerHTML = 'hello'
         document.getElementById('subscribe-form').reset();
         return true;
+    //If isValid flag is set to false that means there are errors, so it shows them on an alert
     } else {
         alert(errorsArray.join('\n'));
         return false;
@@ -186,69 +193,77 @@ function updateGreeting() {
     greeting.innerHTML = `Hello ${nameInput}`;
 }
 
+//Add name input event listeners
 var nameInput = document.getElementById('name-input');
 nameInput.addEventListener('blur', validateName);
 nameInput.addEventListener('focus', function(){
     var validation = document.getElementById('name-validation');
     validation.innerHTML = '';
 });
-nameInput.addEventListener('focus', updateGreeting);
-nameInput.addEventListener('blur', updateGreeting);
-nameInput.addEventListener('keydown', updateGreeting);
-
+nameInput.addEventListener('keyup', updateGreeting);
+//Add email input event listeners
 var emailInput = document.getElementById('email-input');
 emailInput.addEventListener('blur', validateEmail);
 emailInput.addEventListener('focus', function(){
     var validation = document.getElementById('email-validation');
     validation.innerHTML = '';
 });
+//Add password input event listeners
 var passwordInput = document.getElementById('password-input');
 passwordInput.addEventListener('blur', validatePassword);
 passwordInput.addEventListener('focus', function(){
     var validation = document.getElementById('password-validation');
     validation.innerHTML = '';
 });
+//Add password confirmation input event listeners
 var passwordConfirmationInput = document.getElementById('confirm-password-input');
 passwordConfirmationInput.addEventListener('blur', validatePasswordConfirmation);
 passwordConfirmationInput.addEventListener('focus', function(){
     var validation = document.getElementById('confirm-password-validation');
     validation.innerHTML = '';
 });
-var AgeInput = document.getElementById('age-input');
-AgeInput.addEventListener('blur', validateAge);
-AgeInput.addEventListener('focus', function(){
+//Add age input event listeners
+var ageInput = document.getElementById('age-input');
+ageInput.addEventListener('blur', validateAge);
+ageInput.addEventListener('focus', function(){
     var validation = document.getElementById('age-validation');
     validation.innerHTML = '';
 });
+//Add phone number input event listeners
 var phoneInput = document.getElementById('phone-input');
 phoneInput.addEventListener('blur', validatePhoneNumber);
 phoneInput.addEventListener('focus', function(){
     var validation = document.getElementById('phone-validation');
     validation.innerHTML = '';
 });
+//Add address input event listeners
 var addressInput = document.getElementById('address-input');
 addressInput.addEventListener('blur', validateAddress);
 addressInput.addEventListener('focus', function(){
     var validation = document.getElementById('address-validation');
     validation.innerHTML = '';
 });
+//Add city input event listeners
 var cityInput = document.getElementById('city-input');
 cityInput.addEventListener('blur', validateCity);
 cityInput.addEventListener('focus', function(){
     var validation = document.getElementById('city-validation');
     validation.innerHTML = '';
 });
+//Add postal code input event listeners
 var postalInput = document.getElementById('postal-input');
 postalInput.addEventListener('blur', validatePostalCode);
 postalInput.addEventListener('focus', function(){
     var validation = document.getElementById('postal-validation');
     validation.innerHTML = '';
 });
-var IDInput = document.getElementById('id-input');
-IDInput.addEventListener('blur', validateIDNumber);
-IDInput.addEventListener('focus', function(){
+//Add id number input event listeners
+var idInput = document.getElementById('id-input');
+idInput.addEventListener('blur', validateIDNumber);
+idInput.addEventListener('focus', function(){
     var validation = document.getElementById('id-validation');
     validation.innerHTML = '';
 });
+//Add send button event listeners
 var sendButton = document.getElementById('send-btn');
 sendButton.addEventListener('click', validateForm);
