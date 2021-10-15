@@ -171,6 +171,8 @@ function validateForm() {
             inputsArray.push(fields[i].value);
         }
         alert(inputsArray.join('\n'));
+        document.getElementById('form-greeting').innerHTML = 'hello'
+        document.getElementById('subscribe-form').reset();
         return true;
     } else {
         alert(errorsArray.join('\n'));
