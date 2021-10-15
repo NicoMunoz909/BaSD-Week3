@@ -48,7 +48,7 @@ function validateAge() {
     if (Number.isInteger(inputValue) && inputValue >= 18) {
         return true
     } else {
-        validation.innerHTML = '*Age must an integer over 18';
+        validation.innerHTML = '*Age must an integer equal or higher than 18';
         return false
     }
 }
@@ -109,7 +109,70 @@ function validateIDNumber() {
 }
 
 function validateForm() {
-    
+    var isValid = true;
+    var errorsArray = [];
+    var fields = document.getElementsByClassName('getter');
+    for (var i=0; i < fields.length; i++ ) {
+        console.log(i)
+        if (fields[i].id == 'name-input') {
+            if (!validateName()) {
+                errorsArray.push('Full name must be at least 6 characters long and contain a whitespace');
+                isValid = false;
+            }
+        } else if (fields[i].id == 'email-input') {
+            if (!validateEmail()) {
+                errorsArray.push('Email must have valid email format.');
+                isValid = false;
+            }
+        } else if (fields[i].id == 'password-input') {
+            if (!validatePassword()) {
+                errorsArray.push('Password must be at least 8 characters long and contain numbers and letters');
+                isValid = false;
+            }
+        } else if (fields[i].id == 'confirm-password-input') {
+            if (!validatePasswordConfirmation()) {
+                errorsArray.push('Passwords don\'t match');
+                isValid = false;
+            }
+        } else if (fields[i].id == 'age-input') {
+            if (!validateAge()) {
+                errorsArray.push('Age must an integer equal or higher than 18');
+                isValid = false;
+            }
+        } else if (fields[i].id == 'phone-input') {
+            if (!validatePhoneNumber()) {
+                errorsArray.push('Phone must be at least 7 digits long. Can\'t contain whitespace, hyphen or parenthesis');
+                isValid = false;
+            }
+        } else if (fields[i].id == 'address-input') {
+            if (!validateAddress()) {
+                errorsArray.push('Address must be at least 5 characters long, contain a whitespace, leters and numbers');
+                isValid = false;
+            }
+        } else if (fields[i].id == 'city-input') {
+            if (!validateCity()) {
+                errorsArray.push('City must be at least 3 characters long.');
+                isValid = false;
+            }
+        } else if (fields[i].id == 'postal-input') {
+            if (!validatePostalCode()) {
+                errorsArray.push('Postal code must be at least 3 characters long.');
+                isValid = false;
+            }
+        } else if (fields[i].id == 'id-input') {
+            if (!validateIDNumber()) {
+                errorsArray.push('ID number must have 7 or 8 digits.');
+                isValid = false;
+            }
+        }
+    }
+    if (isValid) {
+        alert('everything ok');
+        return true;
+    } else {
+        alert(errorsArray);
+        return false;
+    }
 }
 
 var nameInput = document.getElementById('name-input');
