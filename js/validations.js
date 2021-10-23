@@ -177,6 +177,7 @@ function validateForm() {
             inputsArray.push(fields[i].value);
         }
         alert(inputsArray.join('\n'));
+        fetchData();
         document.getElementById('form-greeting').innerHTML = 'hello'
         document.getElementById('subscribe-form').reset();
         return true;
@@ -192,6 +193,37 @@ function updateGreeting() {
     var nameInput = document.getElementById('name-input').value;
     greeting.innerHTML = `Hello ${nameInput}`;
 }
+
+function fetchData() {
+    var spaceIndex = nameInput.value.indexOf(' ')
+    var name = nameInput.value.slice(0, spaceIndex);
+    var surname = nameInput.value.slice(spaceIndex+1, nameInput.value.length);
+    var email = emailInput.value;
+    var password = passwordInput.value;
+    var age = ageInput.value;
+    var phoneNumber = phoneInput.value;
+    var address = addressInput.value
+    var city = cityInput.value;
+    var postalCode = postalInput.value;
+    var idNumber = idInput.value;
+    fetch(`http://curso-dev-2021.herokuapp.com/newsletter?name=${name}&apellido=${surname}&email=${email}
+    &password=${password}&age=${age}&phone=${phoneNumber}&address=${address}&city=${city}&postal=${postalCode}
+    &id=${idNumber}`)
+    .then(response => {
+        if (response.status === 200) {
+            return response.json();
+        } else {
+            throw new Error(`HTTP error! Status:${response.status}`)
+        }
+    })
+    .then(data => {
+        console.log(data);
+    })
+    .catch(error => {
+        console.log(error);
+    })
+}
+
 
 //Add name input event listeners
 var nameInput = document.getElementById('name-input');
