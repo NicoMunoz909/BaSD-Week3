@@ -109,6 +109,7 @@ function validateIDNumber() {
 }
 
 function validateForm() {
+    document.getElementById('modal').classList.toggle('hidden');
     var isValid = true;
     var errorsArray = [];
     var inputsArray = [];
@@ -299,3 +300,8 @@ idInput.addEventListener('focus', function(){
 //Add send button event listeners
 var sendButton = document.getElementById('send-btn');
 sendButton.addEventListener('click', validateForm);
+//Add close function to modal
+var closeModal = document.getElementById('close-modal');
+closeModal.addEventListener('click', function() {
+    document.getElementById('modal').classList.toggle('hidden');
+})
