@@ -1,4 +1,4 @@
-# RR COURSE - 'BECOME A SOFTWARE DEVELOPER' WEEK 3 & 5
+# RR COURSE - 'BECOME A SOFTWARE DEVELOPER' WEEKS 3, 5 & 6
 ## Description
 ### Week 3
 #### Task
@@ -31,6 +31,14 @@ BONUS: Add a greeting that must be modified on real time as the user type his or
 - Comprehend what the DOM is and be able to manipulate it.
 - Control DOM events.
 - Develop functionalities for complex and modern webs.
+### Week 6
+#### Task
+Extend the newspaper subscription form to send and HTTP request with all the data to a web server and save the data in localStorage if the server responds succesfully, which then must be loaded to the form on window load. Also change the page to show the info on a modal instead of using alert.
+#### Goals
+- Understand the details of Client-Server architecture.
+- Comprehend the concept of Callbacks and the diference between Callbacks and Promises.
+- Implement HTTP requests to obtain external data asynchronously.
+- Get used to the tools to save data on the browser.
 
 ## Getting Started
 ### Executing
