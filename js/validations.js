@@ -324,16 +324,16 @@ closeModal.addEventListener('click', function() {
 })
 //Load the data in localStorage to the form on window load
 window.onload = function() {
-    nameInput.value = !!localStorage.getItem('name') ? localStorage.getItem('name') : null;
+    nameInput.value = !!localStorage.getItem('name') ? localStorage.getItem('name') : '';
     nameInput.value += ' ';
-    nameInput.value += !!localStorage.getItem('apellido') ? localStorage.getItem('apellido') : null;
-    emailInput.value = !!localStorage.getItem('email') ? localStorage.getItem('email') : null;
-    passwordInput.value = !!localStorage.getItem('password') ? localStorage.getItem('password') : null;
-    ageInput.value = !!localStorage.getItem('age') ? localStorage.getItem('age') : null;
-    phoneInput.value = !!localStorage.getItem('phone') ? localStorage.getItem('phone') : null;
-    addressInput.value = !!localStorage.getItem('address') ? localStorage.getItem('address') : null;
-    cityInput.value = !!localStorage.getItem('city') ? localStorage.getItem('city') : null;
-    postalInput.value = !!localStorage.getItem('postal') ? localStorage.getItem('postal') : null;
-    idInput.value = !!localStorage.getItem('id') ? localStorage.getItem('id') : null;
+    nameInput.value += !!localStorage.getItem('apellido') ? localStorage.getItem('apellido') : '';
+    emailInput.value = !!localStorage.getItem('email') ? localStorage.getItem('email') : '';
+    passwordInput.value = !!localStorage.getItem('password') ? localStorage.getItem('password') : '';
+    ageInput.value = !!localStorage.getItem('age') ? localStorage.getItem('age') : '';
+    phoneInput.value = !!localStorage.getItem('phone') ? localStorage.getItem('phone') : '';
+    addressInput.value = !!localStorage.getItem('address') ? localStorage.getItem('address') : '';
+    cityInput.value = !!localStorage.getItem('city') ? localStorage.getItem('city') : '';
+    postalInput.value = !!localStorage.getItem('postal') ? localStorage.getItem('postal') : '';
+    idInput.value = !!localStorage.getItem('id') ? localStorage.getItem('id') : '';
     updateGreeting();
 }
