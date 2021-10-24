@@ -1,3 +1,10 @@
+function saveLocalStorage(data) {
+    for(key in data) {
+        localStorage.setItem(`${key}`, data[key]);
+    }
+    console.log(localStorage)
+}
+
 function validateName() {
     var validation = document.getElementById('name-validation');
     var inputValue = document.getElementById('name-input').value;
@@ -226,6 +233,7 @@ function fetchData() {
         document.getElementById('modal-title').innerHTML = 'You subscribed succesfully!'
         document.getElementById('modal-message').innerHTML = modalMessage;
         document.getElementById('modal').classList.toggle('hidden'); //Show Modal
+        saveLocalStorage(data);
     })
     .catch(error => {
         document.getElementById('modal-title').innerHTML = 'Error on subscription'
