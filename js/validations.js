@@ -176,14 +176,14 @@ function validateForm() {
         }
     }
     /*If the isValid flag is true that means there are no errors on the form so it
-    gathers all the inputs values by iterating trough the fields then show them on an alert,
+    calls the function to send the data to the server,
     finally reset the form and the greeting*/
     if (isValid) {
         fetchData();
         document.getElementById('form-greeting').innerHTML = 'hello'
         document.getElementById('subscribe-form').reset();
         return true;
-    //If isValid flag is set to false that means there are errors, so it shows them on an alert
+    //If isValid flag is set to false that means there are errors, so it shows them on a modal
     } else {
         var modalMessage = '<ul>';
         for (var i=0; i<errorsArray.length; i++) {
