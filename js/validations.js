@@ -111,7 +111,6 @@ function validateIDNumber() {
 function validateForm() {
     var isValid = true;
     var errorsArray = [];
-    var inputsArray = [];
     var fields = document.getElementsByClassName('getter'); //Get all the input fields on the form
     /*Iterate trough all the input fields and call the apropiate validate function by matching the id's
     If the validate function returns false, push the error message to the errors array 
@@ -223,7 +222,9 @@ function fetchData() {
         document.getElementById('modal').classList.toggle('hidden'); //Show Modal
     })
     .catch(error => {
-        console.log(error);
+        document.getElementById('modal-title').innerHTML = 'Error on subscription'
+        document.getElementById('modal-message').innerHTML = error;
+        document.getElementById('modal').classList.toggle('hidden'); //Show Modal
     })
 }
 
