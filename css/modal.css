@@ -19,6 +19,10 @@
     width: 80%; 
     background-color: white;
 }
+#modal-title {
+    border-bottom: 1px solid gray;
+    text-transform: uppercase;
+}
 #close-modal:hover, #close-modal:focus {
     cursor: pointer;
 }
