@@ -335,4 +335,5 @@ window.onload = function() {
     cityInput.value = !!localStorage.getItem('city') ? localStorage.getItem('city') : null;
     postalInput.value = !!localStorage.getItem('postal') ? localStorage.getItem('postal') : null;
     idInput.value = !!localStorage.getItem('id') ? localStorage.getItem('id') : null;
+    updateGreeting();
 }
