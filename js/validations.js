@@ -178,8 +178,14 @@ function validateForm() {
         return true;
     //If isValid flag is set to false that means there are errors, so it shows them on an alert
     } else {
-        alert(errorsArray.join('\n'));
-        return false;
+        var modalMessage = '<ul>';
+        for (var i=0; i<errorsArray.length; i++) {
+            modalMessage += `<li>${errorsArray[i]}</li>`
+        }
+        modalMessage += '</ul>'
+        document.getElementById('modal-title').innerHTML = 'Error on form submition!'
+        document.getElementById('modal-message').innerHTML = modalMessage;
+        document.getElementById('modal').classList.toggle('hidden'); //Show Modal
     }
 }
 
