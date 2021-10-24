@@ -214,7 +214,7 @@ function fetchData() {
     var city = cityInput.value;
     var postalCode = postalInput.value;
     var idNumber = idInput.value;
-    fetch(`http://curso-dev-2021.herokuapp.com/newsletter?name=${name}&apellido=${surname}&email=${email}
+    fetch(`https://curso-dev-2021.herokuapp.com/newsletter?name=${name}&apellido=${surname}&email=${email}
     &password=${password}&age=${age}&phone=${phoneNumber}&address=${address}&city=${city}&postal=${postalCode}
     &id=${idNumber}`)
     .then(response => {
