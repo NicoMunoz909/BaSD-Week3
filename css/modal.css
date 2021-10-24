@@ -23,6 +23,9 @@
     border-bottom: 1px solid gray;
     text-transform: uppercase;
 }
+#close-modal {
+    font-size: 30px;
+}
 #close-modal:hover, #close-modal:focus {
     cursor: pointer;
 }
