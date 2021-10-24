@@ -10,7 +10,6 @@
     background-color: rgba(0,0,0,0.4);
     font-size: 0.95em;
 }
-
 .modal-content {
     display: flex;
     justify-content: space-between;
@@ -20,17 +19,9 @@
     width: 80%; 
     background-color: white;
 }
-
-  
-#close-modal:hover,
-#close-modal:focus {
+#close-modal:hover, #close-modal:focus {
     cursor: pointer;
 }
-
-.list-modal {
-    list-style: none;
-}
-
 .hidden {
     display: none;
 }

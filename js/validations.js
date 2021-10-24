@@ -109,7 +109,6 @@ function validateIDNumber() {
 }
 
 function validateForm() {
-    document.getElementById('modal').classList.toggle('hidden');
     var isValid = true;
     var errorsArray = [];
     var inputsArray = [];
@@ -174,10 +173,6 @@ function validateForm() {
     gathers all the inputs values by iterating trough the fields then show them on an alert,
     finally reset the form and the greeting*/
     if (isValid) {
-        for (var i=0; i < fields.length; i++ ) {
-            inputsArray.push(fields[i].value);
-        }
-        alert(inputsArray.join('\n'));
         fetchData();
         document.getElementById('form-greeting').innerHTML = 'hello'
         document.getElementById('subscribe-form').reset();
@@ -218,7 +213,14 @@ function fetchData() {
         }
     })
     .then(data => {
-        console.log(data);
+        var modalMessage = '<ul>';
+        for (key in data) {
+            modalMessage += `<li>${key}: ${data[key]}</li>`
+        }
+        modalMessage += '</ul>'
+        document.getElementById('modal-title').innerHTML = 'You subscribed succesfully!'
+        document.getElementById('modal-message').innerHTML = modalMessage;
+        document.getElementById('modal').classList.toggle('hidden'); //Show Modal
     })
     .catch(error => {
         console.log(error);
